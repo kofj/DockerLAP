@@ -45,7 +45,7 @@ RUN buildDeps=" \
 		# 100.
 		#libmcrypt \
 		# 100.
-		mcrypt \
+		#mcrypt \
 	"; \
 	set -x \
 	&& apt-get update && apt-get install -y $buildDeps --no-install-recommends && rm -rf /var/lib/apt/lists/* \
@@ -79,15 +79,15 @@ RUN buildDeps=" \
 		# 80.打开对bz2文件的支持
 		--with-mbstring \			
 		# 90.多字节,字符串的支持
-		--with-mcrypt \				
+		#--with-mcrypt \				
 		# 100.mcrypt算法
-		--with-mhash \				
+		#--with-mhash \				
 		# 110.hash算法
 		--enable-exif \				
 		# 120.片的元数据支持
-		--enable-bcmath \			
+		#--enable-bcmath \			
 		# 130.打开图片大小调整,用到zabbix监控的时候用到了这个模块
-		--with-gd \					
+		#--with-gd \					
 		# 140.打开GD库的支持
 		--with-pear \				
 		# 150.打开pear命令的支持，PHP扩展用的
